@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail Produit - LuxeShop</title>
+    <link rel="stylesheet" href="../CSS/product-detail.css">
+    <link rel="stylesheet" href="../CSS/cav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="detail-header">
+        <nav class="navbar">
+            <div class="logo">Luxe<span>Shop</span></div>
+            <ul class="nav-links">
+                <li><a href="../E_commerce/home.html">Accueil</a></li>
+                <li><a href="../E_commerce/products.html">Produits</a></li>
+                <li><a href="../E_commerce/collection.html">Collections</a></li>
+                <li><a href="../E_commerce/apropos.html">À propos</a></li>
+                <li><a href="../E_commerce/contact.html" class="active">Contact</a></li>
+                <li><a href="../E_commerce/voir-collection1.html"></a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+                <a href="#" class="user-btn"><i class="fas fa-user"></i></a>
+                <a href="../E_commerce/checkout.html" class="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-detail-container">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="../image/rolex0.jpg" alt="Montre de luxe" id="mainProductImage">
+            </div>
+            <div class="thumbnail-images">
+                <img src="../image/rolex1.jpg" alt="Vue alternative 1" class="thumbnail active">
+                <img src="../image/rplex2.jpg" alt="Vue alternative 2" class="thumbnail">
+                <img src="../image/rolex3.jpg" alt="Vue alternative 3" class="thumbnail">
+                <img src="../image/rolex4.jpg" alt="Vue alternative 4" class="thumbnail">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <div class="product-header">
+                <h1 class="product-title">Montre Chronographe Édition Limitée</h1>
+                <div class="product-meta">
+                    <span class="product-sku">Réf: LUXE2023</span>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="review-count">(42 avis)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-price">
+                <span class="current-price">899€</span>
+                <span class="original-price">1 199€</span>
+                <span class="discount-badge">-25%</span>
+            </div>
+
+            <div class="product-description">
+                <p>Cette montre chronographe édition limitée allie précision suisse et design audacieux. Avec son boîtier en acier inoxydable poli et son cadran bleu saphir, elle est le compagnon idéal pour les occasions spéciales comme pour la vie quotidienne.</p>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Mouvement automatique suisse</li>
+                    <li><i class="fas fa-check"></i> Étanche jusqu'à 100m</li>
+                    <li><i class="fas fa-check"></i> Verre saphir antireflet</li>
+                    <li><i class="fas fa-check"></i> Bracelet en cuir italien</li>
+                    <li><i class="fas fa-check"></i> Garantie 5 ans</li>
+                </ul>
+            </div>
+
+            <div class="product-options">
+                <div class="option-group">
+                    <label for="color">Couleur:</label>
+                    <div class="color-options">
+                        <input type="radio" id="color-blue" name="color" value="blue" checked>
+                        <label for="color-blue" class="color-option blue" title="Bleu"></label>
+                        <input type="radio" id="color-black" name="color" value="black">
+                        <label for="color-black" class="color-option black" title="Noir"></label>
+                        <input type="radio" id="color-silver" name="color" value="silver">
+                        <label for="color-silver" class="color-option silver" title="Argent"></label>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label for="size">Taille:</label>
+                    <select id="size" class="size-select">
+                        <option value="38mm">38mm</option>
+                        <option value="40mm" selected>40mm</option>
+                        <option value="42mm">42mm</option>
+                    </select>
+                </div>
+
+                <div class="option-group">
+                    <label for="quantity">Quantité:</label>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                        <input type="number" id="quantity" min="1" max="10" value="1">
+                        <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-actions">
+                <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Ajouter au panier
+                </button>
+                <button class="wishlist-btn">
+                    <i class="far fa-heart"></i> Liste d'envies
+                </button>
+            </div>
+
+            <div class="product-details-accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Description détaillée</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>La montre Chronographe Édition Limitée est un chef-d'œuvre d'horlogerie. Son mouvement automatique de précision est visible à travers le fond de boîte saphir. Le cadran bleu profond présente des index appliqués et des aiguilles recouvertes de Super-LumiNova pour une lisibilité parfaite en toutes conditions.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Spécifications techniques</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <table>
+                            <tr>
+                                <th>Mouvement</th>
+                                <td>Automatique suisse, 25 rubis, 28 800 alternances/heure</td>
+                            </tr>
+                            <tr>
+                                <th>Fonctions</th>
+                                <td>Heures, minutes, secondes, chronographe, date</td>
+                            </tr>
+                            <tr>
+                                <th>Boîtier</th>
+                                <td>Acier inoxydable 316L, diamètre 40mm, épaisseur 12mm</td>
+                            </tr>
+                            <tr>
+                                <th>Verre</th>
+                                <td>Saphir bombé avec traitement antireflet</td>
+                            </tr>
+                            <tr>
+                                <th>Étanchéité</th>
+                                <td>10 ATM (100m)</td>
+                            </tr>
+                            <tr>
+                                <th>Bracelet</th>
+                                <td>Cuir italien avec boucle déployante</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Livraison & Retours</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Livraison gratuite en 2-3 jours ouvrés. Retours acceptés sous 30 jours. La garantie de 5 ans couvre les défauts de fabrication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="related-products">
+        <h2 class="section-title">Vous pourriez aussi aimer</h2>
+        <div class="products-grid">
+            <!-- Produits similaires chargés dynamiquement -->
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>LuxeShop</h3>
+                <p>Votre destination pour des produits haut de gamme et un service exceptionnel.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Boutique</h3>
+                <ul>
+                    <li><a href="products.html">Tous les produits</a></li>
+                    <li><a href="#">Nouveautés</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Promotions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <ul>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Livraison & Retours</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Luxe, Paris</p>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@luxeshop.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 LuxeShop. Tous droits réservés.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../Javascript/panier.js"></script>
+    <script src="../Javascript/annimation.js"></script>
+</body>
+</html>

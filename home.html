@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeShop - Boutique en ligne premium</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/cav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="hero-header">
+        <nav class="navbar">
+            <div class="logo">Luxe<span>Shop</span></div>
+            <ul class="nav-links">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="../E_commerce/products.html">Produits</a></li>
+                <li><a href="../E_commerce/collection.html">Collections</a></li>
+                <li><a href="../E_commerce/apropos.html">À propos</a></li>
+                <li><a href="../E_commerce/contact.html" class="active">Contact</a></li>
+                
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+                <a href="#" class="user-btn"><i class="fas fa-user"></i></a>
+                <a href="../E_commerce/checkout.html" class="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Élégance Redéfinie</h1>
+            <p>Découvrez notre collection exclusive de produits haut de gamme</p>
+            <a href="../E_commerce/product-detail.html" class="cta-btn">Explorer maintenant</a>
+        </div>
+    </header>
+
+    <section class="featured-categories">
+        <h2 class="section-title">Catégories en vedette</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <img src="../image/rolex5.jpg" alt="Montres de luxe">
+                <div class="category-info">
+                    <h3>Montres</h3>
+                    <a href="products.html?category=montres" class="category-link">Voir collection <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="../image/parfun.jpg" alt="Parfums exclusifs">
+                <div class="category-info">
+                    <h3>Parfums</h3>
+                    <a href="products.html?category=perfumes" class="category-link">Voir collection <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="../image/accessoir.jpg" alt="Accessoires premium">
+                <div class="category-info">
+                    <h3>Accessoires</h3>
+                    <a href="products.html?category=accessories" class="category-link">Voir collection <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bestsellers">
+        <h2 class="section-title">Nos best-sellers</h2>
+        <div class="products-grid">
+            <!-- Produits dynamiquement chargés via JavaScript -->
+        </div>
+        <a href="../E_commerce/product-detail.html" class="view-all-btn">Voir tous les produits</a>
+    </section>
+
+    <section class="brand-story">
+        <div class="story-content">
+            <h2>Notre histoire</h2>
+            <p>Depuis 2010, LuxeShop s'engage à offrir des produits d'exception, soigneusement sélectionnés pour leur qualité et leur design. Chaque pièce de notre collection raconte une histoire d'artisanat et d'excellence.</p>
+            <a href="#" class="story-link">En savoir plus sur nous</a>
+        </div>
+        <div class="story-image">
+            <img src="../image/rolex4.jpg" alt="Notre histoire">
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Abonnez-vous à notre newsletter</h2>
+        <p>Recevez en exclusivité nos nouveautés, offres spéciales et invitations à des événements privés.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="subscribe-btn">S'abonner</button>
+        </form>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>LuxeShop</h3>
+                <p>Votre destination pour des produits haut de gamme et un service exceptionnel.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Boutique</h3>
+                <ul>
+                    <li><a href="products.html">Tous les produits</a></li>
+                    <li><a href="#">Nouveautés</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Promotions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <ul>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Livraison & Retours</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Luxe, Paris</p>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@luxeshop.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 LuxeShop. Tous droits réservés.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../Javascript/panier.js"></script>
+    <script src="../Javascript/annimation.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Collections Rares - LuxeShop</title>
+    <link rel="stylesheet" href="../CSS/cav.css">
+    <link rel="stylesheet" href="../CSS/collection.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="collections-header">
+        <nav class="navbar">
+            <div class="logo">Luxe<span>Shop</span></div>
+            <ul class="nav-links">
+                <li><a href="../E_commerce/home.html">Accueil</a></li>
+                <li><a href="../E_commerce/products.html">Produits</a></li>
+                <li><a href="#l">Collections</a></li>
+                <li><a href="../E_commerce/apropos.html">À propos</a></li>
+                <li><a href="../E_commerce/contact.html" class="active">Contact</a></li>
+                <li><a href="../E_commerce/voir-collection1.html"></a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+                <a href="#" class="user-btn"><i class="fas fa-user"></i></a>
+                <a href="../E_commerce/checkout.html" class="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Nos Collections Exclusives</h1>
+            <p>Découvrez des pièces uniques et rares à travers nos collections thématiques</p>
+        </div>
+    </header>
+
+    <!-- Collections Section -->
+    <section class="collections-section">
+        <div class="collection-filters">
+            <button class="filter-btn active" data-filter="all">Toutes</button>
+            <button class="filter-btn" data-filter="art">Art Ancien</button>
+            <button class="filter-btn" data-filter="instruments">Instruments</button>
+            <button class="filter-btn" data-filter="bijoux">Bijoux</button>
+            <button class="filter-btn" data-filter="decor">Décoration</button>
+        </div>
+
+        <div class="collections-grid">
+            <!-- Collection 1 -->
+            <div class="collection-card" data-category="art">
+                <div class="collection-image">
+                    <img src="../image/trsornation.jpg" alt="Collection Art Ancien">
+                    <div class="overlay">
+                        <a href="collection-detail.html?id=1" class="view-btn">Voir la collection</a>
+                    </div>
+                </div>
+                <div class="collection-info">
+                    <h3>Trésors de la Renaissance</h3>
+                    <p>15 objets exceptionnels</p>
+                    <span class="collection-badge">Édition Limitée</span>
+                </div>
+            </div>
+
+            <!-- Collection 2 -->
+            <div class="collection-card" data-category="instruments">
+                <div class="collection-image">
+                    <img src="../image/instrum1.jpg" alt="Collection Instruments">
+                    <div class="overlay">
+                        <a href="collection-detail.html?id=2" class="view-btn">Voir la collection</a>
+                    </div>
+                </div>
+                <div class="collection-info">
+                    <h3>Instruments Historiques</h3>
+                    <p>8 pièces uniques</p>
+                    <span class="collection-badge">Rareté</span>
+                </div>
+            </div>
+
+            <!-- Collection 3 -->
+            <div class="collection-card" data-category="bijoux">
+                <div class="collection-image">
+                    <img src="../image/joyeau royau.jpg" alt="Collection Bijoux">
+                    <div class="overlay">
+                        <a href="collection-detail.html?id=3" class="view-btn">Voir la collection</a>
+                    </div>
+                </div>
+                <div class="collection-info">
+                    <h3>Joyaux Royaux</h3>
+                    <p>12 pièces d'exception</p>
+                    <span class="collection-badge">Exclusif</span>
+                </div>
+            </div>
+
+            <!-- Collection 4 -->
+            <div class="collection-card" data-category="decor">
+                <div class="collection-image">
+                    <img src="../image/decoration .jpg" alt="Collection Décoration">
+                    <div class="overlay">
+                        <a href="collection-detail.html?id=4" class="view-btn">Voir la collection</a>
+                    </div>
+                </div>
+                <div class="collection-info">
+                    <h3>Décoration d'Époque</h3>
+                    <p>20 pièces sélectionnées</p>
+                    <span class="collection-badge">Nouveau</span>
+                </div>
+            </div>
+
+            <!-- Collection 5 -->
+            <div class="collection-card" data-category="art">
+                <div class="collection-image">
+                    <img src="../image/master.jpg" alt="Collection Art Moderne">
+                    <div class="overlay">
+                        <a href="collection-detail.html?id=5" class="view-btn">Voir la collection</a>
+                    </div>
+                </div>
+                <div class="collection-info">
+                    <h3>Modern Masters</h3>
+                    <p>10 œuvres contemporaines</p>
+                    <span class="collection-badge">Limited</span>
+                </div>
+            </div>
+
+            <!-- Collection 6 -->
+            <div class="collection-card" data-category="bijoux">
+                <div class="collection-image">
+                    <img src="../image/Gard-temps epoque.jpg" alt="Collection Montres">
+                    <div class="overlay">
+                        <a href="collection-detail.html?id=6" class="view-btn">Voir la collection</a>
+                    </div>
+                </div>
+                <div class="collection-info">
+                    <h3>Garde-Temps Précieux</h3>
+                    <p>7 montres de collection</p>
+                    <span class="collection-badge">Rare</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>Abonnez-vous à notre Newsletter</h2>
+            <p>Recevez en exclusivité nos nouvelles collections et événements privés</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Votre adresse email" required>
+                <button type="submit" class="subscribe-btn">S'abonner</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>LuxeShop</h3>
+                <p>Votre destination pour des produits haut de gamme et un service exceptionnel.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Boutique</h3>
+                <ul>
+                    <li><a href="products.html">Tous les produits</a></li>
+                    <li><a href="#">Nouveautés</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Promotions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <ul>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Livraison & Retours</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Luxe, Paris</p>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@luxeshop.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 LuxeShop. Tous droits réservés.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../Javascript/collection.js"></script>
+    <script src="../Javascript/annimation.js"></script>
+    <script src="../Javascript/panier.js"></script>
+</body>
+</html>

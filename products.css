@@ -1,0 +1,240 @@
+/* Products Header */
+.products-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/products-bg.jpg') center/cover no-repeat;
+    padding: 8rem 0 4rem;
+    color: white;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Products Section */
+.products-section {
+    padding: 4rem 0;
+    display: grid;
+   /* grid-template-columns: 300px 1fr;*/
+    gap: 3rem;
+    width: 100%;
+
+}
+
+.products-filter {
+   /* top: 120px;
+    align-self: start;*/
+    display: flex;
+    justify-content: center;
+}
+
+.filter-toggle {
+    display: none;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.filter-toggle i {
+    margin-left: 10px;
+}
+
+.filter-options {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 50%;
+    height: 100%;
+    position: sticky;
+}
+
+.filter-group {
+    margin-bottom: 2rem;
+}
+
+.filter-group h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.filter-group ul li {
+    margin-bottom: 0.5rem;
+}
+
+.filter-group ul li a {
+    transition: var(--transition);
+    display: block;
+    padding: 5px 0;
+}
+
+.filter-group ul li a:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.price-range {
+    margin-top: 1.5rem;
+}
+
+.range-slider {
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.sort-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.apply-filters {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.apply-filters:hover {
+    background-color: #1a252f;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 0.5rem;
+}
+
+.page-nav, .page-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+.page-nav.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.page-number.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.page-nav:hover, .page-number:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Products CTA */
+.products-cta {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/cta-bg.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.products-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.products-cta p {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .products-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-options {
+        display: none;
+        margin-bottom: 2rem;
+    }
+    
+    .filter-options.active {
+        display: block;
+    }
+    
+    .filter-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .products-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .products-cta .cta-btn {
+        width: 100%;
+    }
+}

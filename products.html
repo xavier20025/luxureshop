@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Art Ancien - LuxeShop</title>
+    <link rel="stylesheet" href="../CSS/cav.css">
+    <link rel="stylesheet" href="../CSS/products.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    /* Collection Detail Page Styles */
+.collection-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/collection-art-bg.jpg') center/cover no-repeat;
+    height: 60vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.collection-detail {
+    padding: 5rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.collection-description {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 0 20px;
+}
+
+.collection-description h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+}
+
+.collection-description p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.collection-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.meta-item i {
+    font-size: 1.2rem;
+}
+
+.collection-items {
+    padding: 0 20px;
+}
+
+.collection-items h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--dark-color);
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.collection-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.collection-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.item-link {
+    display: block;
+    color: inherit;
+}
+
+.collection-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.item-info {
+    padding: 1.5rem;
+}
+
+.item-info h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.item-price {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.3rem;
+}
+
+.item-period {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.collection-cta {
+    text-align: center;
+    margin: 5rem auto;
+    padding: 3rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    max-width: 800px;
+}
+
+.collection-cta h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.collection-cta p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+.other-collections {
+    padding: 5rem 20px;
+    background-color: #f9f9f9;
+}
+
+.other-collections h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    color: var(--dark-color);
+}
+
+@media (max-width: 768px) {
+    .collection-header {
+        height: 50vh;
+    }
+    
+    .collection-description h2 {
+        font-size: 2rem;
+    }
+    
+    .collection-meta {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .collection-cta {
+        padding: 2rem;
+        margin: 3rem auto;
+    }
+    
+    .collection-cta h3 {
+        font-size: 1.5rem;
+    }
+}
+</style>
+<body>
+    <!-- Header -->
+    <header class="hero-header">
+        <nav class="navbar">
+            <div class="logo">Luxe<span>Shop</span></div>
+            <ul class="nav-links">
+                <li><a href="../E_commerce/home.html">Accueil</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="../E_commerce/collection.html">Collections</a></li>
+                <li><a href="../E_commerce/apropos.html">À propos</a></li>
+                <li><a href="../E_commerce/contact.html" class="active">Contact</a></li>
+                
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+                <a href="#" class="user-btn"><i class="fas fa-user"></i></a>
+                <a href="../E_commerce/checkout.html" class="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Élégance Redéfinie</h1>
+            <p>Découvrez notre collection exclusive de produits haut de gamme</p>
+            <a href="../E_commerce/product-detail.html" class="cta-btn">Explorer maintenant</a>
+        </div>
+    </header>
+    <!-- Collection Detail -->
+    <section class="collection-detail">
+        <div class="collection-description">
+            <h2>Trésors de la Renaissance</h2>
+            <p>Cette collection rassemble des pièces exceptionnelles datant de  20023 a 2025, soigneusement sélectionnées pour leur valeur magnifiaque et artistique. Chaque montre a été authentifiée par nos experts.</p>
+            <div class="collection-meta">
+                <div class="meta-item">
+                    <i class="fas fa-history"></i>
+                    <span>Période : 2023 - 20025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Provenance : Europe</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certifié par : luxeshop Experts International</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="collection-items">
+            <h3>MONTRE HAUTE GAMME</h3>
+            <div class="items-grid">
+                <!-- Item 1 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=101" class="item-link">
+                        <img src="../image/rolex5.jpg" alt="Tableau Renaissance">
+                        <div class="item-info">
+                            <h4>ROLEX</h4>
+                            <p class="item-price">24 500€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/hublo.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>HUBLO</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/zenite.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>ZENITE</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2023</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/longines.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>LONGINES</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2023</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/coccorde.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>CONCCORDE</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2025</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/POEDAGAR.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>POEDAGAR</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/tudor.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>TUDOR</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/omega.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>OMEGA</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/breget.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>BREGET</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Ajoutez d'autres items ici -->
+            </div>
+        </div>
+
+        <div class="collection-cta">
+            <h3>Intéressé par une pièce de cette collection ?</h3>
+            <p>Nos experts sont à votre disposition pour toute information complémentaire.</p>
+            <a href="contact.html" class="btn-primary">Contactez un expert</a>
+        </div>
+    </section>
+
+    <!-- Other Collections -->
+    <section class="collection-detail">
+        <div class="collection-description">
+            <h2></h2>
+            <p></p>
+            <div class="collection-meta">
+                <div class="meta-item">
+                    <i class="fas fa-history"></i>
+                    <span>Période : 2023 - 20025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Provenance : SUISSE</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certifié par : luxeshop Experts International</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="collection-items">
+            <h3>PARFUMS HAUTE GAMME</h3>
+            <div class="items-grid">
+                <!-- Item 1 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=101" class="item-link">
+                        <img src="../image/BLEU CHANNEL.jpg" alt="Tableau Renaissance">
+                        <div class="item-info">
+                            <h4>BLRU DE CHANNEL</h4>
+                            <p class="item-price">24 500€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/SAUVAGE.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>SAUVAGE</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/VERSAGE.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>VERSAGE</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/VALENTINO.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>VALENTINO</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/LIGUID BRUN.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>LIQUIDE BRUN</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/IVES SANIT L'AURENT.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>YVES SAINT LAURENT</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/1MILLION.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>1MILLION</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/ALLURE.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>ALLURE</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/DIOR.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4>DIOR</h4>
+                            <p class="item-price">18 750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Ajoutez d'autres items ici -->
+            </div>
+        </div>
+
+        <div class="collection-cta">
+            <h3>Intéressé par une pièce de cette collection ?</h3>
+            <p>Nos experts sont à votre disposition pour toute information complémentaire.</p>
+            <a href="contact.html" class="btn-primary">Contactez un expert</a>
+        </div>
+    </section>
+
+    <!-- Other Collections --> <section class="collection-detail">
+        <div class="collection-description">
+            <h2></h2>
+            <p></p>
+            <div class="collection-meta">
+                <div class="meta-item">
+                    <i class="fas fa-history"></i>
+                    <span>Période : 2023 - 20025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Provenance : ENGLETAIRE</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certifié par : luxeshop Experts International</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="collection-items">
+            <h3>ACCESSOIRES HAUTE GAMME</h3>
+            <div class="items-grid">
+                <!-- Item 1 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=101" class="item-link">
+                        <img src="../image/ACCESS1.jpg" alt="Tableau Renaissance">
+                        <div class="item-info">
+                            <h4></h4>
+                            <p class="item-price">290€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/ACCESS2.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4></h4>
+                            <p class="item-price">120€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/ACCESS3.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4></h4>
+                            <p class="item-price">140€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/ACCESS4.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4></h4>
+                            <p class="item-price">160€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/ACCESS5.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4></h4>
+                            <p class="item-price">190€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/ACCESS6.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4></h4>
+                            <p class="item-price">170€</p>
+                            <p class="item-period">XVe siècle</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/ACCESS7.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4></h4>
+                            <p class="item-price">150€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/ACCESS8.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4></h4>
+                            <p class="item-price">180€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="collection-item">
+                    <a href="product-detail.html?id=102" class="item-link">
+                        <img src="../image/ACCESS9.jpg" alt="Sculpture Religieuse">
+                        <div class="item-info">
+                            <h4></h4>
+                            <p class="item-price">750€</p>
+                            <p class="item-period">EDITION 2022</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Ajoutez d'autres items ici -->
+            </div>
+        </div>
+
+        <div class="collection-cta">
+            <h3>Intéressé par une pièce de cette collection ?</h3>
+            <p>Nos experts sont à votre disposition pour toute information complémentaire.</p>
+            <a href="contact.html" class="btn-primary">Contactez un expert</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>LuxeShop</h3>
+                <p>Votre destination pour des produits haut de gamme et un service exceptionnel.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Boutique</h3>
+                <ul>
+                    <li><a href="products.html">Tous les produits</a></li>
+                    <li><a href="#">Nouveautés</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Promotions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <ul>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Livraison & Retours</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Luxe, Paris</p>
+                <p><i class="fas fa-phone"></i> +221 78 836 55 50</p>
+                <p><i class="fas fa-envelope"></i> contact@luxeshop.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 LuxeShop. Tous droits réservés.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../Javascript/voir-collection1.js"></script>
+    <script src="js/script.js"></script>
+   
+</body>
+</html>

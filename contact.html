@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LuxeShop</title>
+    <link rel="stylesheet" href="../CSS/cav.css">
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="contact-header">
+        <nav class="navbar">
+            <div class="logo">Luxe<span>Shop</span></div>
+            <ul class="nav-links">
+                <li><a href="../E_commerce/home.html">Accueil</a></li>
+                <li><a href="../E_commerce/products.html">Produits</a></li>
+                <li><a href="../E_commerce/collection.html">Collections</a></li>
+                <li><a href="../E_commerce/apropos.html">À propos</a></li>
+                <li><a href="#" class="active">Contact</a></li>
+                <li><a href="../E_commerce/voir-collection1.html"></a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+                <a href="#" class="user-btn"><i class="fas fa-user"></i></a>
+                <a href="../E_commerce/checkout.html" class="cart-btn"></a>
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Contactez Nos Experts</h1>
+            <p>Une question sur une pièce ? Notre équipe est à votre écoute</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Prendre Rendez-vous</h2>
+                <p>Pour des conseils personnalisés ou une expertise, nos spécialistes se tiennent à votre disposition.</p>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Notre Showroom</h3>
+                        <p>123 Rue du Luxe, 60021 SENEGAL, DAKAR, SALI</p>
+                        <p>Ouvert du lundi au samedi, 10h-19h</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Téléphone</h3>
+                        <p> +221 75 106 88 42</p>
+                        <p>Service disponible de 9h à 20h</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p>contact@luxeshop.com</p>
+                        <p>Réponse sous 24h</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Envoyez-nous un Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom Complet *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Sujet *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Sélectionnez un sujet</option>
+                            <option value="expertise">Demande d'expertise</option>
+                            <option value="collection">Information sur une collection</option>
+                            <option value="purchase">Achat d'une pièce</option>
+                            <option value="other">Autre demande</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Je souhaite recevoir la newsletter LuxeShop</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Envoyer le Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615509614!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1623258126835!5m2!1sfr!2sfr" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-header">
+            <h2>Questions Fréquentes</h2>
+            <p>Trouvez rapidement des réponses à vos questions</p>
+        </div>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Comment vérifier l'authenticité d'une pièce ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Toutes nos pièces sont accompagnées d'un certificat d'authenticité détaillé rédigé par nos experts. Pour les pièces les plus précieuses, nous fournissons également des rapports d'expertise complets avec historique de provenance.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Quelles sont les options de livraison ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Nous proposons des solutions de livraison sécurisées adaptées à chaque objet : transport spécialisé avec assurance pour les pièces fragiles ou précieuses, service de messagerie diplomatique pour les œuvres d'art internationales, et livraison personnelle par nos agents pour les acquisitions les plus importantes.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Puis-je visiter votre showroom sur rendez-vous ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolument. Notre showroom parisien est accessible sur rendez-vous pour des visites privées. Nos experts se feront un plaisir de vous guider à travers nos collections et de répondre à toutes vos questions dans un cadre confidentiel et sécurisé.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Comment se déroule une expertise ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Notre service d'expertise comprend plusieurs étapes : analyse matérielle, recherche de provenance, comparaison stylistique et examen technique. Nous utilisons des technologies de pointe comme la spectrométrie ou la réflectographie infrarouge pour authentifier les œuvres. Un rapport détaillé vous est remis avec nos conclusions.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Proposez-vous des solutions de paiement échelonné ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Pour les acquisitions importantes, nous proposons effectivement des solutions de paiement personnalisées : échelonnement sur mesure, crédit-bail pour les collectionneurs professionnels, ou même des échanges avec reprise d'anciennes pièces de votre collection. Nos conseillers financiers peuvent étudier avec vous la solution la plus adaptée.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>LuxeShop</h3>
+                <p>Votre destination pour des produits haut de gamme et un service exceptionnel.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Boutique</h3>
+                <ul>
+                    <li><a href="products.html">Tous les produits</a></li>
+                    <li><a href="#">Nouveautés</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Promotions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <ul>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Livraison & Retours</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Luxe, Paris</p>
+                <p><i class="fas fa-phone"></i> +221 75 106 88 42</p>
+                <p><i class="fas fa-envelope"></i> contact@luxeshop.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 LuxeShop. Tous droits réservés.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../Javascript/annimation.js"></script>
+    <script src="../Javascript/panier.js"></script>
+    <script src="../Javascript/contact.js"></script>
+</body>
+</html>
